@@ -94,6 +94,77 @@ function numberFormat(numberDecimal) {
 }
 
 
+// Fuzzy-match a number: is the number above or below a number within a certain percent?
+
+
+// Find the number of hours or days difference between two dates.
+
+var day = function(yyyy, mm, dd) {
+	var presentDay = new Date();
+	var futureDay = new Date (yyyy, (mm-1), dd);
+	var minutes = (futureDay - presentDay)/60000;
+	var hours = minutes / 60
+	var days = Math.floor(hours/24); 
+console.log("There are " + days + " days until Jordan's 7th birthday party!"); 
+
+};
+
+
+// Given a string version of a number such as "42", return the value as an actual Number, such as 42.
+
+var version = function(string){ 
+	var answer = Number(string);
+	
+console.log('Insert: "' + string + '"');
+	return answer;
+	
+};
+
+
+// Find the smallest value in an array that is greater than a given number
+
+var value = function(j){
+	var array = [8, 18, 21, 26, 22, 15, 74, 47];
+	var min = Math.max.apply(Math, array);
+	
+for (i=0; i < array.length; i++) {
+	if (array[i] > j) {
+		if (array[i] < min) {
+			min = array[i];
+			};
+		};
+	};
+	console.log("The smallest number in the array: [" + array + "] greater than " + j + " is: " + min);
+	
+};
+
+
+// Find the total value of just the numbers in an array, even if some of the items are not numbers.
+
+
+var total = function(h, i, j, k, l, m, n, o, p){
+	var array = [h, i, j, k, l, m, n, o, p];
+	var value = 0
+for (i=0; i < array.length; i++) {
+	if (typeof array[i] == 'number') {
+		total += array[i];	
+		};
+	};
+	console.log("The total value of the numbers in the array [" + array + "] is:" + value);
+
+};
+
+
+// Given an array of objects and the name of a key, return the array sorted by the value of that key in each of the objects: "a" + [{a:2},{a:3},{a:1}] → [{a:1},{a:2},{a:3}].
+
+var sortedArray = function(key){
+	var array = [{key:2}, {key:3}, {key:1}];
+	
+console.log(array.sort(function(a, b) {return a.key - b.key}));
+
+};
+
+
 // Outputs
 
 phoneNumber("770-769-7690");
@@ -102,3 +173,9 @@ urlCheck("www.sandrarose.com");
 upperCase("josh donlan");
 separatorHasToChange("a/b/c");
 numberFormat(12.75692);
+day(2012, 05, 05);
+version(42);
+value(8);
+total(12, 16, 2, 6, 3, 10, 26, 8, 0);
+sortedArray();
+
