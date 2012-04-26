@@ -120,7 +120,7 @@ console.log('Insert: "' + string + '"');
 	
 };
 
-
+// Make-up: Flowchart for Assignment 3; I need credit for the entire Week 3 assignment. My biggest problem was the flowchart.
 
 // Arrays
 
